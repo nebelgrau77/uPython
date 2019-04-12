@@ -93,16 +93,16 @@ hrs, mins = time_decoder(prev_time) #get the initial time
 
 draw_hands_time(hrs,mins,1) #draw the hands for the first time
 
-min_counter = 0 #count minutes for time keeping
+
 
 while True:
         if time.time() > prev_time + 60: #if 60 seconds have passed
                 prev_time = time.time() #update the prev_time variable
                 draw_hands_time(hrs,mins,0) #cancel the previously drawn hands
                 mins += 1 #increment minutes by 1
-                min_counter += 1 #increment minutes counter
-                if min_counter == 60: #if 60 minutes have passed
+                
+                if mins%60 == 0: #every 60 minutes
                         hrs += 1 #increment hours by 1
-                        min_counter = 0 #and zero the counter
+                        
                 draw_hands_time(hrs,mins,1) #draw new hands
-                #oled.show()
+                
