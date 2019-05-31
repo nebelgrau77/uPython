@@ -15,8 +15,8 @@ initiate temperature sensor
 
 get the current temperature
 
-temp_max, time_temp_max = current_temp, current_time    
-temp_min, time_temp_min = current_temp, current_time    
+temp_max, time_temp_max = current_temp, current_time    #initial values
+temp_min, time_temp_min = current_temp, current_time    #initial values
 
 go to sleep for 5 minutes
 wake up
