@@ -1,0 +1,28 @@
+import os, machine, time, ds1307, <temperature sensor>, <esp?>
+
+initiate ds1307
+
+get current time
+get previous date (from a config file where the last date is saved)
+if current date > previous date:
+    update the date in the config file
+    make a new log file named 'current-date.txt'
+
+initiate temperature sensor
+
+get the current temperature
+
+temp_max, time_temp_max = current_temp, current_time    
+temp_min, time_temp_min = current_temp, current_time    
+
+go to sleep for 5 minutes
+wake up
+get current temperature
+
+if temp > temp_max:
+    temp_max = current_temp, time_temp_max = current_time
+elif temp < temp_min:
+    temp_min = current_temp, time_temp_min = current_time
+
+save temp_max, time_temp_max, temp_min, time_temp_min to file
+
