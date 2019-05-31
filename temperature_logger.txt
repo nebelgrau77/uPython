@@ -8,6 +8,9 @@ if current date > previous date:
     update the date in the config file
     make a new log file named 'current-date.txt'
 
+config file must keep track of the last X files saved, so that on boot the system will do some cleanup and remove old files, 
+keeping just three, five or some other number
+
 initiate temperature sensor
 
 get the current temperature
